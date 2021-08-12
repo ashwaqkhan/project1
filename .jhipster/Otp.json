@@ -1,0 +1,50 @@
+{
+  "name": "Otp",
+  "fields": [
+    {
+      "fieldName": "contextId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otp",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "OtpType",
+      "fieldValues": "Email,Phone"
+    },
+    {
+      "fieldName": "expiryTime",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OtpStatus",
+      "fieldValues": "Pending,Failed,Expired,Approved"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "otp",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["SimplifyMarketplace"],
+  "changelogDate": "20210812100644"
+}

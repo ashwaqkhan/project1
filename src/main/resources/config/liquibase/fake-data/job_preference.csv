@@ -1,0 +1,11 @@
+id;hourly_rate;daily_rate;monthly_rate;hour_per_day;hour_per_week;engagement_type;employment_type;location_type;available_from;available_to;is_active
+1;1631;19452;38621;16109;48333;PartTime;Contractual;WorkFromOffice;2021-08-12;2021-08-12;true
+2;14561;4566;8453;19394;89835;FullTime;Permanent;Both;2021-08-12;2021-08-11;true
+3;41781;5581;81391;32536;89109;FullTime;Permanent;Both;2021-08-11;2021-08-11;false
+4;76000;97281;97506;16525;8963;FullTime;Permanent;WorkFromOffice;2021-08-11;2021-08-11;false
+5;60969;67512;34862;92111;43899;FullTime;Permanent;WorkFromOffice;2021-08-12;2021-08-11;true
+6;11243;56529;44467;80120;88381;PartTime;Contractual;WorkFromOffice;2021-08-11;2021-08-12;true
+7;30807;85550;69824;4920;48613;FullTime;Permanent;WorkFromHome;2021-08-12;2021-08-12;false
+8;9137;62354;10646;53274;73831;FullTime;Permanent;WorkFromHome;2021-08-12;2021-08-12;false
+9;48402;85479;77888;9996;46472;PartTime;Permanent;Both;2021-08-12;2021-08-12;false
+10;28420;37190;72215;58518;88596;FullTime;Contractual;WorkFromHome;2021-08-12;2021-08-11;true

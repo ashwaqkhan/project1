@@ -1,0 +1,53 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyWebsite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyType",
+      "fieldType": "CompanyType",
+      "fieldValues": "IT,Consultant,Hospital,MediaHouse"
+    },
+    {
+      "fieldName": "primaryPhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "customUser",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "customUser",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "client",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["SimplifyMarketplace"],
+  "changelogDate": "20210812101344"
+}

@@ -1,0 +1,11 @@
+id;context_id;otp;email;is_active;phone;type;expiry_time;status
+1;definition capacitor;19430;Cheyanne24@yahoo.com;false;62665;Email;2021-08-12;Failed
+2;Toys;251;Cathy.Dickinson@yahoo.com;false;29675;Email;2021-08-11;Failed
+3;Peso open-source;6723;Lesly_Swift@hotmail.com;true;90952;Phone;2021-08-12;Failed
+4;Montserrat haptic Frozen;89332;Jerod_Konopelski@hotmail.com;true;67312;Phone;2021-08-11;Failed
+5;microchip Loan input;12169;Tia79@yahoo.com;true;26407;Email;2021-08-12;Expired
+6;optimizing;36496;Wilson94@gmail.com;false;21451;Phone;2021-08-12;Approved
+7;projection Representative solid;45130;Maximilian.Deckow25@yahoo.com;false;28513;Phone;2021-08-12;Expired
+8;Bike Utah paradigms;74547;Sunny36@hotmail.com;true;63639;Phone;2021-08-11;Pending
+9;motivating;39402;Dina26@yahoo.com;false;53882;Email;2021-08-12;Approved
+10;Computers;81078;Verna97@yahoo.com;false;58608;Email;2021-08-11;Failed
