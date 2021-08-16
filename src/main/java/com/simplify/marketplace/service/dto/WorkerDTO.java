@@ -1,15 +1,18 @@
 package com.simplify.marketplace.service.dto;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+//import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import javax.validation.constraints.*;
 
+//import org.springframework.data.elasticsearch.annotations.Document;
+
 /**
  * A DTO for the {@link com.simplify.marketplace.domain.Worker} entity.
  */
+
 public class WorkerDTO implements Serializable {
 
     private Long id;
@@ -26,7 +29,7 @@ public class WorkerDTO implements Serializable {
 
     private String description;
 
-    private LocalDate dateOfBirth;
+    //    private LocalDate dateOfBirth;
 
     private Boolean isActive;
 
@@ -82,13 +85,14 @@ public class WorkerDTO implements Serializable {
         this.description = description;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
+    //
+    //    public LocalDate getDateOfBirth() {
+    //        return dateOfBirth;
+    //    }
+    //
+    //    public void setDateOfBirth(LocalDate dateOfBirth) {
+    //        this.dateOfBirth = dateOfBirth;
+    //    }
 
     public Boolean getIsActive() {
         return isActive;
@@ -145,7 +149,7 @@ public class WorkerDTO implements Serializable {
             ", lastName='" + getLastName() + "'" +
             ", primaryPhone='" + getPrimaryPhone() + "'" +
             ", description='" + getDescription() + "'" +
-            ", dateOfBirth='" + getDateOfBirth() + "'" +
+
             ", isActive='" + getIsActive() + "'" +
             ", customUser=" + getCustomUser() +
             ", skills=" + getSkills() +

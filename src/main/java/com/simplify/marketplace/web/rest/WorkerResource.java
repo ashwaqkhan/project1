@@ -13,11 +13,13 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
+//import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -33,6 +35,9 @@ import tech.jhipster.web.util.ResponseUtil;
 public class WorkerResource {
 
     private final Logger log = LoggerFactory.getLogger(WorkerResource.class);
+
+    @Autowired
+    RabbitTemplate rabbit_msg;
 
     private static final String ENTITY_NAME = "worker";
 
@@ -61,7 +66,8 @@ public class WorkerResource {
         if (workerDTO.getId() != null) {
             throw new BadRequestAlertException("A new worker cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        WorkerDTO result = workerService.save(workerDTO);
+        WorkerDTO result = workerService.save(workerDTO); //mysql
+        rabbit_msg.convertAndSend("topicExchange1", "routingKey", result);
         return ResponseEntity
             .created(new URI("/api/workers/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
