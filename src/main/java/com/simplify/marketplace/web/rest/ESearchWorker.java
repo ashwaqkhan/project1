@@ -44,4 +44,9 @@ public class ESearchWorker {
         workerRepo.deleteAll();
         return "Records Deleted Successfully";
     }
+
+    @GetMapping("/workerSearchQuery/{SearchQuery}")
+    public ArrayList<ElasticWorker> searchWorkers(@PathVariable String SearchQuery) {
+        return workerRepo.searchQuery(SearchQuery);
+    }
 }

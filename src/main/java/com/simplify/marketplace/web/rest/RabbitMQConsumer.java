@@ -17,7 +17,6 @@ public class RabbitMQConsumer {
     @Autowired
     WorkerDTORepo repo;
 
-    @Autowired
     ElasticWorker e;
 
     @Autowired
@@ -29,7 +28,6 @@ public class RabbitMQConsumer {
         e.setFirstName(w.getFirstName());
         System.out.println("consumer");
 
-        System.out.println(w);
         rep1.save(e);
     }
 }
